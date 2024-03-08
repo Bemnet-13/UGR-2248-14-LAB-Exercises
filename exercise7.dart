@@ -1,4 +1,4 @@
-// Exercise - 6 -- Functions
+// Exercise - 7 -- Functions
 void main() {
   double result = sum(3, 5);
   print("The sum is ${result}");
