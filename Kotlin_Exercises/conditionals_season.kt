@@ -17,16 +17,6 @@ fun determineSeason(month: Int, day: Int): String {
 }
 
 fun main() {
-    println("Enter month (1-12): ")
-    val month = readLine()?.toIntOrNull() ?: return println("Invalid input")
-    println("Enter day (1-31): ")
-    val day = readLine()?.toIntOrNull() ?: return println("Invalid input")
-
-    if (month !in 1..12 || day !in 1..31) {
-        println("Invalid date")
-        return
-    }
-
-    val season = determineSeason(month, day)
+    val season = determineSeason(10, 2)
     println("The season is: $season")
 }
