@@ -3,6 +3,7 @@ package com.example.composeapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -25,13 +26,14 @@ data class Message(val author:String, val body : String)
 
 @Composable
 fun MessageCard(msg : Message) {
-    Text(msg.author)
-    Text(msg.body)
+    Column {
+        Text(msg.author)
+        Text(msg.body)
+    }
 }
 
 @Preview
 @Composable
 fun PreviewMessageCard() {
     MessageCard(msg = Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!"))
-
 }
