@@ -16,18 +16,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PreviewMessageCard()
+            MessageCard(msg = Message(author = "Android", body = "Jet Compose"))
         }
     }
 }
 
+data class Message(val author:String, val body : String)
+
 @Composable
-fun MessageCard(name : String) {
-    return Text("Hello, $name")
+fun MessageCard(msg : Message) {
+    Text(msg.author)
+    Text(msg.body)
 }
 
 @Preview
 @Composable
 fun PreviewMessageCard() {
-    MessageCard(name = "Bemnet")
+    MessageCard(msg = Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!"))
+
 }
