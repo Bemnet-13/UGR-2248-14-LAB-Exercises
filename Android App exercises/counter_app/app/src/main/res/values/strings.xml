@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">counter_app</string>
+    <string name="inc_count">Increase</string>
+    <string name="dec_count">Decrease</string>
+    <string name="reset">Reset Count</string>
+    <string name="count_val">0</string>
+
+</resources>
